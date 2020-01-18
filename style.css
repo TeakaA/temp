@@ -50,7 +50,8 @@ a{
     text-decoration: none;
 }
 *{
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
 
 
@@ -66,7 +67,7 @@ a{
 	padding: 30px;
 	display: block;
 	position: absolute;
-	z-index: 2;
+	z-index: 20;
 
 }
 .header p{
@@ -94,18 +95,128 @@ a{
 .main-container{
 	display: inline-block;
 	position: relative;
-	background-attachment: fixed;
-	z-index: 0;
 	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	overflow: hidden;
 }
-.background img{
+.background {
+	background-image: url(img/city.jpg);
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 	width: 100%;
-	opacity: 0.5;
+	height: 100%;
+	z-index: 1;
+	top:0px;
+	left: 0px;
+}
+.inner-container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	top:0px;
+	left: 0px;
+	display: flex;
+	background: rgba(75, 75, 93, .8);
+	justify-content: center;
+	
 }
 .inner{
-	width: 90%;
+	width: 80%;
+	border-top: 2px solid grey;
+	margin-top: 150px;
+	padding-top: 50px;
 	display: flex;
-	position:absolute;
-	border-top: solid 2px gray;
-	z-index:5;
+	align-items: center;
+    flex-direction: column;
+}
+.inner h1 {
+	font-size: 50px;
+	color: #fff;
+	font-weight: 400;
+}
+.inner-box{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	margin-top: 90px;
+}
+.box{
+	width: 33%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border-right: 2px solid gray;
+}
+.box:last-child{
+	border-right: none;
+}
+.box i {
+	font-size: 40px;
+	color:#6cc091;
+	margin-bottom: 30px;
+}
+.box h3{
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+.box p{
+	font-size: 20px;
+	color: #fff;
+	opacity: 0.7;
+}
+.btn{
+	font-size: 18px;
+	color: #6cc091;
+	border-radius: 30px;
+	border: 2px solid #6cc091;
+	text-transform: uppercase;
+	padding: 10px 30px;
+	margin-top: 30px;
+	transition: 1s;
+	
+	
+}
+.btn:hover{
+	background-color: rgba(108, 192, 145, 0.15);
+	
+}
+
+.white-container{
+	width: 100%;
+	display: flex;
+}
+.white-box{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 70px 50px;
+	flex-direction: column;
+}
+.white-box img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
+}
+.white-box h3{
+	font-size: 25px;
+	line-height: 40px;
+	color:#555;
+	margin-bottom: 30px;
+}
+.white-box p{
+	font-size: 20px;
+	color:#9a9a9a;
+	margin-bottom: 30px;
+	text-align: center;
+	line-height: 30px;
 }
